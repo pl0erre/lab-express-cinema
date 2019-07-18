@@ -6,17 +6,15 @@ const Movie = require("../models/Movie");
 router.get("/movies", (req, res, next) => {
   Movie.find({})
   .then(function(movies) {
-    res.render("movies", { movies: movies });
+    res.render("movies", {movies: movies});
   });
 });
 
 
 router.get('/movies/:id/movie-details', (req, res, next) => {
-  debugger
   Movie.findById(req.params.id)
-  .then(movieDetails => {
-    debugger
-    res.render("movie", {movieDetails});
+  .then(function(movieDetails) {
+    res.render("movie", {movieDetails: movieDetails});
   });
 });
 

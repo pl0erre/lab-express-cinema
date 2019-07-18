@@ -1,10 +1,30 @@
-<main class="main-movieDetails">
-  {{#each movieDetails}}
-  <div class="movieDetails-container">
-    <h1>{{title}}</h1>
-    <img src="{{image}}">
+<main class="main-movie-details">
+  <div class="movie-details-cart">
+    <h1>{{movieDetails.title}}</h1>
+    <img src="{{movieDetails.image}}">
   </div> 
-  {{/each}}
+  <div class="movie-details-more">
+    <h2>Directed by</h2>
+    <p>{{movieDetails.director}}</p>
+    <h2>Staring</h2>
+    <ul>
+      {{#each movieDetails.stars}}
+        <li>{{this}}</li>
+      {{/each}}
+    </ul>
+    <p>{{movieDetails.description}}</p>
+    <ul class="movie-times">
+      {{#each movieDetails.showtimes}}
+        <li>{{this}}</li>
+      {{/each}}
+    </ul>
+  </div>
 </main>
 
 
+ title: String,
+    director: String,
+    stars: Array,
+    image: String,
+    description: String,
+    showtimes: Array,
