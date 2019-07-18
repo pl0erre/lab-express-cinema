@@ -1,53 +1,18 @@
-body {
-  /* padding: 50px; */
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; 
-  background-image: url("../images/cinema.jpg");
-  background-size: cover;
-  /* background-repeat: no-repeat; */
+* {
+  padding: 0;
+  margin: 0;
+}
+html {
   width: auto;
   height: auto;
-
+  width: 100vw;
+  height: 100vh;
 }
 
-.main-home {
-  display: flex;
-}
-
-.movies-container {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-}
-
-.main-title {
-  text-align: center;
-}
-
-.movies-cart {
-  width: 20%;
-  align-items: baseline;
-}
-
-.empty-container {
-  flex: 1;
-}
-
-.home-container {
-  color: white;
-  font-size: 4rem;
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; 
   width: 100%;
-  font-family: "Helvetica";
-  flex: 1;
-}
-
-.error h1 {
-  font-size: 3rem;
-  color: white;
-}
-
-.error h2 {
-  font-size: 2.4rem;
-  color: white;
+  height: 100%;
 }
 
 h1 {
@@ -62,7 +27,83 @@ p {
   width: 100%;
 }
 
-a {
+
+.main-home {
+  display: flex;
+  background-image: url("../images/cinema.jpg");
+  background-size: cover;
+  background-repeat: no-repeat; 
+  width: 100%;
+  height: 100%;
+}
+
+.main-movies {
+  width: 100%;
+  height: 100%;
+}
+
+.movies-container {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.main-title {
+  text-align: center;
+}
+
+img {
+  width: 200px;
+  margin: 0 auto;
+}
+
+.movies-cart {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  margin: 20px;
+}
+
+.empty-container {
+  flex: 1;
+}
+
+.home-container {
+  color: white;
+  font-size: 4rem;
+  width: 100%;
+  font-family: "Helvetica";
+  flex: 1;
+}
+
+.main-movieDetails {
+  display: flex;
+  width: 50%;
+  height: 100%;
+}
+
+.movieDetails-container {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.error h1 {
+  font-size: 3rem;
+  color: white;
+}
+
+.error h2 {
+  font-size: 2.4rem;
+  color: white;
+}
+
+
+
+.main-home a {
   color: rgb(94, 139, 149); 
   -webkit-appearance: button;
   -moz-appearance: button;

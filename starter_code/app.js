@@ -48,11 +48,14 @@ app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 // default value for title local
 app.locals.title = 'Cinema Ironhack';
 
-
 const index = require('./routes/index');
 app.use('/', index);
 
-const films = require('./routes/movies');
-app.use('/', films);
+const movies = require('./routes/movies');
+app.use('/', movies);
+
+// const movieId = require('./routes/movie');
+// app.use('/movie', movieId);
+
 
 module.exports = app;
